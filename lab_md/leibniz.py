@@ -1,7 +1,6 @@
 def leibniz(size):
     result = [[0 for rows in range(size + 1)] for cols in range(size + 1)]
     i = 0
-    j = 0
     while (i <= size):
         j = 0
         while (j <= i):
