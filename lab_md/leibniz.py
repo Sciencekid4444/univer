@@ -20,13 +20,14 @@ def leibniz(size):
         j = 1
         while (j <= i):
             if (i == 1 and j == 1):
-                print("1", end="")
+                print("1".center(8),end='')
             else:
-                print("1/", result[i - 1][j - 1] * i, "\t\t", end="")
+                r = str('1/' + str(result[i - 1][j - 1] * i)).center(8)
+                print(r,end='')
 
             j += 1
 
-        print("\n", end="")
+        print()
         i += 1
         
 def main():

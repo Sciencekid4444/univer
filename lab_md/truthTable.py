@@ -1,5 +1,6 @@
 expression = input()
 dictionary ={}
+
 for i in range(0,len(expression)):
     if expression[i].isalpha():
         if expression[i] not in dictionary:

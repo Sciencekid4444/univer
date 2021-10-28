@@ -1,24 +1,23 @@
-from math import pow
-def printPowerSet(set,set_size):
-    print("[",end="")
-    n=0
-    powerSet_size = int(pow(2,set_size)) 
-    for counter in range(0, powerSet_size):
-        print("[ ",end="")               
-        for j in range(0, set_size):
-            if((counter & (1 << j)) > 0):
-                print(set[j],end=" ")
-        print("]",end=",")
-        n += 1
-    print("]")
-    print(n)
+def truthtable (n):
+      if n < 1:
+        return [[]]
+      subtable = truthtable(n-1)
+      return [ row + [v] for row in subtable for v in [0,1] ]
 
-#try:
-#    set = []
-#    while True:
-#        set.append(int(input()))
-#except:
-#    printPowerSet(set, len(set))
-set = [[],[1,2],1,2]
+def printPowerSet(set):
+    tt = truthtable(len(set))
+    print('[',end='')
+    for subtt in tt:
+        print('[',end='')   
+        for idx in range(0,len(subtt)):
+            if subtt[idx]==1:
+                print(f'{ set[idx]} ',end ="")
+        if(tt[len(tt)-1]==subtt):
+            print("]",end='')
+        else:
+            print("]",end='')
+    print(']')
+    print(tt)
+set = [[1,2,3],2,3]
 
-printPowerSet(set,len(set))
+printPowerSet(set)
