@@ -12,7 +12,7 @@ def main():
     #     else:
     #        blue+=1
     #    redArea = red/(red+blue)*42
-    n = 10000000
+    n = 100000
     for _ in range(n):
         x = randint(0,image.width-1)
         y = randint(0,image.height-1)
