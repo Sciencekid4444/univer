@@ -16,7 +16,6 @@ def leibniz(size):
         while (j < size):
             print("\t", end="")
             j += 1
-
         j = 1
         while (j <= i):
             if (i == 1 and j == 1):
@@ -24,13 +23,11 @@ def leibniz(size):
             else:
                 r = str('1/' + str(result[i - 1][j - 1] * i)).center(8)
                 print(r,end='')
-
             j += 1
-
         print()
         i += 1
         
 def main():
-    leibniz(5)
+    leibniz(10)
 if __name__ == '__main__':
     main()

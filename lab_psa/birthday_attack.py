@@ -9,7 +9,7 @@ def convert(string):
 
 def main():
     BD = []
-    for i in range(0, 15000):
+    for _ in range(0, 15000):
         day = randint(1,31)
         month = randint(1,12)
         year = randint(1,2021)
