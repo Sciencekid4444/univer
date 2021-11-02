@@ -1,6 +1,6 @@
 from random import randint
 total_earnings = []
-N= 1000000
+N = 1000000
 def sums(arr):
     sum=0
     for elem in arr:

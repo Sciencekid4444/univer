@@ -1,4 +1,6 @@
 from random import randint
+
+
 def game(n,k,maxpts):
     N = 100000
     res=0

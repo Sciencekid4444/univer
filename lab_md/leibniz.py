@@ -26,7 +26,7 @@ def leibniz(size):
             j += 1
         print()
         i += 1
-        
+
 def main():
     leibniz(10)
 if __name__ == '__main__':

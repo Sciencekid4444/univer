@@ -23,8 +23,7 @@ def match(expression, pattern):
         t = pat[0]
         pat = pat[2:]
         if t == '.':
-            ch = exp[0]
-            while len(exp)>0 and exp[0] == ch:
+            while len(exp)>0:
                 exp = exp[1:]
             return match(exp,pat)
         if t == exp[0]:

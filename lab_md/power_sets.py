@@ -1,4 +1,4 @@
-def truthtable (n):
+def truthtable(n):
       if n < 1:
         return [[]]
       subtable = truthtable(n-1)
