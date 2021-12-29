@@ -14,11 +14,11 @@ def game(n,k,maxpts):
     return (res/N)
         
 def main():
-    n = 21
-    k = 17
+    n = 10
+    k = 1
     maxpts = 10
 
-    res = game(n,k,maxpts)
+    res = game(n, k, maxpts)
     print(res)
 
 if __name__ == '__main__':

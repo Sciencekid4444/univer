@@ -5,7 +5,7 @@ from base64 import b64encode
 
 def convert(string):
     hash_obj = hashlib.md5(str(string).encode('utf-8')).hexdigest()
-    return hash_obj[:7]
+    return hash_obj[:5]
 
 def main():
     BD = []

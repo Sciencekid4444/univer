@@ -1,5 +1,5 @@
 def xnor(x,y):
-    if ((x and y)or(not x and not y))==True:
+    if ((x and y) or (not x and not y)):
         return 1
     return 0
 

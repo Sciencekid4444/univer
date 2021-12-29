@@ -1,29 +1,32 @@
 from random import randint
-total_earnings = []
-N = 1000000
+total_earnings_player = []
+total_earnings_bank = []
+
+N = 100000
 def sums(arr):
-    sum=0
+    sum = 0
     for elem in arr:
-        sum+=elem
+        sum += elem
     return sum
 
-def winnings():
+def winnings(fee):
     for i in range(N):
-        sum=0
-        flipped = 1   
-        while(sum==0):
-         if (randint(1,2)==2):
-            sum = 2**flipped
-         else:
-          flipped+=1
-        total_earnings.append(sum)
+        game = 0
+        flipped = 1
+        while game == 0:
+          if randint(1, 2) == 2:
+            game = 2**flipped
+          else:
+            flipped += 1
+        sum_player = game - fee
+        total_earnings_player.append(sum_player)
 
-    total = sums(total_earnings)
-    return total/N
+    player = sums(total_earnings_player)/N
+    print(f'Player money: ', player)
 
 def main():
-    res = winnings()
-    print(res)
-
+    for i in range(10):
+        print(f'fee : {i}', winnings(i))
+        print()
 if __name__ == '__main__':
     main()
