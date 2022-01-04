@@ -3,7 +3,6 @@ import json
 import operator
 from nltk.tokenize import word_tokenize
 import regex as re
-import igraph
 
 
 def get_data() -> dict:
@@ -89,6 +88,11 @@ if __name__ == '__main__':
     emo_dict: dict = {}
     emo_dict = get_emotionalRating()
     tweets_rating: list = tokenize(mock_db, emo_dict)
-    print(top(tweets_rating))
-    print(bottom(tweets_rating))
+    print('Most positive:')
+    for tweet in top(tweets_rating):
+        print(tweet)
+
+    print('Most negative:')
+    for tweet in bottom(tweets_rating):
+        print(tweet)
 
