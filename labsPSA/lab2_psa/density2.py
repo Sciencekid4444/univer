@@ -22,5 +22,3 @@ def simulate() -> float:
 
 if __name__ == "__main__":
     print(simulate())
-# always will return 1 bcs we divide the first stick into two ones,
-# and the bigger one again so always 2 sticks coming from the bigger side will be bigger than initial
